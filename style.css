@@ -1,0 +1,138 @@
+
+    body {
+        font-family: 'TT Lakes';
+        margin: 0;
+        background-color: #F2F2F2;
+    }
+    
+    .services__top {
+        background-color: white;
+        border-top: 1px solid #D9FFF5;
+    }
+    
+    .services__top h1 {
+        margin: 0;
+        padding: 16px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 400;
+        color: rgb(126, 126, 130);
+    }
+
+    .services__checkbox {
+        display: none;
+    }
+
+    .services__middle {
+        /* ??? */
+    }
+
+    .services__list {
+        display: flex;
+        gap: 16px;
+        list-style: none;
+        margin: 0;
+        padding: 16px;
+    }
+
+    .services__list-style {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        max-width: 240px;
+        border: 2px solid #EAEAEA;
+        border-radius: 10px;
+    }
+
+    .services__list__img {
+        margin-left: 16px;
+    }
+
+    .services__list-style button {
+        border: 2px solid #FF3E79;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        background-color: white;
+        margin: 16px;
+    }
+
+    .services__list-style button img {
+        vertical-align: middle;
+        width: 8px;
+        height: 12px;
+    }
+
+    .swiper-pagination {
+        top: 92px !important;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #DDDDDD;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #B5B6BC;
+    }
+
+
+@media screen and (min-width: 768px) {
+    
+    .swiper-pagination {
+        display: none;
+    }
+
+    .services__list {
+        flex-wrap: wrap;
+    }
+
+    .services__list-style:nth-child(7),
+    .services__list-style:nth-child(8),
+    .services__list-style:nth-child(9),
+    .services__list-style:nth-child(10) {
+        display: none;
+    }
+
+    .services__checkbox-btn {
+        margin-left: 30px;
+    }
+
+    .services__checkbox-btn::before {
+        content: "";
+        background-image: url(icon.svg);
+        display: inline-block;
+        width: 8px;
+        height: 10px;
+        background-repeat: no-repeat;
+    }
+
+    .services__checkbox-btn::after {
+        content: "Показать все";
+        margin-left: 10px;
+        font-weight: 500;
+    }
+
+    .services__checkbox:checked ~ .services__checkbox-btn::after {
+        content: "Скрыть";
+    }
+
+    .services__checkbox:checked ~ .services__checkbox-btn::before {
+        transform: rotate(180deg);
+    }
+
+    .services__checkbox:checked ~ .services__list .services__list-style:nth-child(7),
+    .services__checkbox:checked ~ .services__list .services__list-style:nth-child(8) {
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width: 1120px) {
+    
+    .services__list-style:nth-child(9),
+    .services__list-style:nth-child(10) {
+        display: flex;
+    }
+
+}
